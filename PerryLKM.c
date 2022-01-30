@@ -3,7 +3,7 @@
  * processes whose PID is greater than an integer given by the user as a module parameter:
  * PROCESS NAME, PID, STATE, PRIORITY, STATIC-PRIORITY, NORMAL-PRIORITY 
  *
- * kernel version 5.11.0-46-generic
+ * kernel version 5.13.0-27-generic
  *
  * Completion time: 3 hours
  * 
