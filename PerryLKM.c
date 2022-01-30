@@ -13,8 +13,10 @@
 
 #include <linux/init.h>
 #include <linux/module.h>  
-#include <linux/kernel.h> 
+#include <linux/kernel.h>
 
+
+static int input_pid = 0;
 
 static int PerryLKM_init(void) 
 {
