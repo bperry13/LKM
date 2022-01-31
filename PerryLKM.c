@@ -11,9 +11,7 @@
  * @version 1.31.22
  */
 
-#include <linux/sched.h>
-#include <linux/list.h>
-#include <linux/init.h>             
+#include <linux/sched.h>             
 #include <linux/module.h>        
 #include <linux/kernel.h>  
 #include <linux/tty.h> 
@@ -33,9 +31,10 @@ static int PerryLKM_init(void) {
     for_each_process(task){
         //if pid > input_pid then print info
         if(task->pid > input_pid){
-            printk(KERN_INFO "%20s\n", "PARENT");
+
             printk(KERN_INFO "%20s%8s%8s%8s%8s%12s\n", "NAME","PID","STATE",
                 "PRIO","ST_PRIO", "NORM_PRIO");
+            printk(KERN_INFO "%20s\n", "PARENT");
             printk(KERN_INFO "%20s%8d%8ld%8d%8d%12d\n",task->comm,task->pid,
                 task->state,task->prio,task->static_prio, task->normal_prio);
 
